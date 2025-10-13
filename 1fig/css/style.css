@@ -53,7 +53,7 @@ body {
 /* ================================================================ */
 .hero-a {
 
-    background: url(img/hero-bg.jpg) 10% 50% / cover no-repeat;
+    background: url(../img/hero-bg.jpg) 10% 50% / cover no-repeat;
     padding: 120px 0;
     margin-bottom: 120px;
 }
@@ -210,4 +210,5 @@ body {
     text-transform: none;
     margin-bottom: 10px;
 }
+
 
