@@ -1,0 +1,30 @@
+body {
+    background: black;
+    color: white;
+    font-size: 64px;
+    text-align: center;
+}
+
+.title::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    transform: translateX(600px) translateY(-17px);
+    border: 2px solid snow;
+    border-radius: 50px;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: rgb(0, 60, 255);
+    position: absolute;
+    transform: translate(900px) translateY(-81px);
+    border: 2px solid snow;
+    border-radius: 50px;
+}
