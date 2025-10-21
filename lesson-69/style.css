@@ -1,0 +1,33 @@
+* {
+    background: black;
+    color: white;
+    font-size: 32px;
+}
+
+.adv-flex {
+    min-height: 88vh;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+
+.adv1 {
+    min-width: 10vw;
+    min-height: 100px;
+    background: gray;
+    border-radius: 30px;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    left: 50vw;
+}
+.adv2 {
+    width: 100px;
+    height: 100px;
+    background: rgb(167, 16, 16);
+    border-radius: 100px;
+    position: fixed;
+    bottom: 120px;
+    left: calc(50vw + 70px);
+    
+}
