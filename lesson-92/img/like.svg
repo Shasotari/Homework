@@ -1,0 +1,21 @@
+<svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.000000" height="29.000000" fill="none">
+	<defs>
+		<g id="pixso_custom_effect_0">
+			<effect x="0.000000" y="4.000000" visibility="visible" fill="rgb(0,0,0)" fill-opacity="0.25" effectType="dropShadow" stdDeviation="4" radius="0" />
+		</g>
+		<filter id="filter_0" width="29.000000" height="29.000000" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="0.000000" dy="4.000000" in="hardAlpha" />
+			<feGaussianBlur stdDeviation="1.33333337" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="out" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0 " />
+			<feBlend result="effect_dropShadow_1" in2="BackgroundImageFix" mode="normal" />
+			<feBlend result="shape" in="SourceGraphic" in2="effect_dropShadow_1" mode="normal" />
+		</filter>
+	</defs>
+	<g filter="url(#filter_0)">
+		<rect id="material-symbols:thumb-up" width="24.000000" height="24.000000" x="2.000000" y="0.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+	</g>
+	<path id="Vector" d="M20 21L10 21L10 8L17 1L18.25 2.25C18.3667 2.36667 18.4627 2.525 18.538 2.725C18.6133 2.925 18.6507 3.11667 18.65 3.3L18.65 3.65L17.55 8L23 8C23.5333 8 24 8.2 24.4 8.6C24.8 9 25 9.46667 25 10L25 12C25 12.1167 24.9877 12.2417 24.963 12.375C24.9383 12.5083 24.9007 12.6333 24.85 12.75L21.85 19.8C21.7 20.1333 21.45 20.4167 21.1 20.65C20.75 20.8833 20.3833 21 20 21ZM8 8L8 21L4 21L4 8L8 8Z" fill="rgb(247.988,251.746,255)" fill-rule="nonzero" />
+</svg>
