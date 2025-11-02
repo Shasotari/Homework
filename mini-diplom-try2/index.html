@@ -57,7 +57,7 @@
                                 <span>Старт</span>
                                 <span>26.06.2023</span>
                             </div>
-                            <div class="hero__title">
+                            <div class="hero__title title-in-general">
                                 Научись печь торты и десерты с нуля
                             </div>
                             <div class="hero__text">
@@ -71,7 +71,7 @@
                         <div class="hero__preview">
                             <img src="img/content-img/girl1.png" alt="Девушка показывает торт">
                             <div class="hero__preview-content">
-                                <a href="/media/cake-video.mov" class="play-button" data-fslightbox>
+                                <a class="play-button" data-fslightbox href="media/cake-video.mov">
                                     <img src="img/icons/play.svg" alt="">
                                 </a>
                                 <p>
@@ -83,7 +83,61 @@
                 </div>
             </section>
         </header>
-        <main class="main"></main>
+        <main class="main">
+            <section class="main__bake-school-info">
+                <div class="container">
+                    <div class="bake-school-info__inner">
+                        <div class="bake-school-info__gift">
+                            <img src="./img/content-img/girl2.jpg"
+                                alt="Пекарь на фоне кухни с кондитерскими изделиями показывает торт">
+                            <div class="gift-content">
+                                <a href="#/" class="button-gift">
+                                    <img src="./img/icons/circum_gift.svg" alt="">
+                                </a>
+                                <p>Нажми на подарок, чтобы получить наш фирменный рецепт</p>
+                            </div>
+                        </div>
+                        <div class="bake-school-info__description">
+                            <div class="description-text">
+                                <h2 class="title-in-general">Наша школа —</h2>
+                                <p>это уютный дом для начинающих кондитеров</p>
+                                <span class="gap"></span>
+                                <p>С нами ты погрузишься в удивительный мир кондитерского искусства, получишь новые
+                                    знания
+                                    и профессиональные навыки! Обретёшь веру в свои силы, научишься приготовлению
+                                    разнообразных современных и классических десертов</p>
+                            </div>
+                            <div class="cards-block">
+                                <div class="card">
+                                    <div class="bake-hat">
+                                        <img src="./img/icons/chef-hat.svg" alt="">
+                                    </div>
+                                    <p>Живое общение с наставниками и одногруппниками</p>
+                                </div>
+                                <div class="card">
+                                    <div class="bake-hat">
+                                        <img src="./img/icons/chef-hat.svg" alt="">
+                                    </div>
+                                    <p>Предоставление всех необходимых материалов</p>
+                                </div>
+                                <div class="card">
+                                    <div class="bake-hat">
+                                        <img src="./img/icons/chef-hat.svg" alt="">
+                                    </div>
+                                    <p>Небольшие группы до 6 человек</p>
+                                </div>
+                                <div class="card">
+                                    <div class="bake-hat">
+                                        <img src="./img/icons/chef-hat.svg" alt="">
+                                    </div>
+                                    <p>Большие аудитории для обучения</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
@@ -183,6 +237,40 @@
                 </div>
             </div>
         </footer>
+            <div class="modal">
+                <div class="modal__window">
+                    <div class="modal__cancel">
+                        <svg class="modal__cancel-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="24.000000" height="24.000000" fill="none" clip-path="url(#clipPath_0)"
+                            customFrame="url(#clipPath_0)">
+                            <defs>
+                                <clipPath id="clipPath_0">
+                                    <rect width="24.000000" height="24.000000" x="0.000000" y="0.000000" rx="12.000000"
+                                        fill="rgb(255,255,255)" />
+                                </clipPath>
+                            </defs>
+                            <rect id="cancel" width="24.000000" height="24.000000" x="0.000000" y="0.000000" rx="12.000000"
+                                fill="rgb(255,255,255)" fill-opacity="0" />
+                            <rect id="cancel" width="22.500000" height="22.500000" x="0.750000" y="0.750000" rx="11.250000"
+                                stroke="rgb(224.673,217.179,225.25)" stroke-width="1.5" />
+                            <path id="Vector"
+                                d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732"
+                                fill-rule="nonzero" stroke="rgb(224.673,217.179,225.25)" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <img src="./img/deco/cupcakes-modal.png" alt="3 капкейка" class="modal__img">
+                    <h3 class="modal__title title-in-general">Удиви своих близких вкусными капкейками</h3>
+                    <p class="modal__p">Оставь свой e-mail, и мы вышлем рецепт на почту</p>
+                    <form class="modal__form">
+                        <label class="modal__form-label">
+                            <input type="email" class="modal__form-input" placeholder="E-mail">
+                            <span>Введите e-mail</span>
+                        </label>
+                    </form>
+                    <button class="modal__button button" type="submit">Получить подарок</button>
+                </div>
+            </div>
     </div>
     <script src="js/fslightbox.js"></script>
     <script src="js/main.js"></script>
