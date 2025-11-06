@@ -61,6 +61,12 @@ body {
     font-size: 74px;
     line-height: 0.82;
 }
+.title-in-general-s {
+    color: var(--title-text);
+    font-family: Gabriola;
+    font-size: 42px;
+    line-height: 0.82;
+}
 
 /* =================================================Модалка=============================================================== */
 .modal {
@@ -547,10 +553,11 @@ body {
 
 /* ====================================================================== */
 .main {
-    padding: 140px 0;
 }
 
-.main__bake-school-info {}
+.main__bake-school-info {
+    padding: 140px 0;
+}
 
 .bake-school-info__inner {
     display: flex;
@@ -664,7 +671,250 @@ body {
     justify-content: center;
 }
 
-/* ========================================================== */
+/* ========================================================================================= */
+.main__programm {
+    padding-bottom: 145px;
+}
+.programm {
+}
+.programm__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 15px;
+}
+.programm__heading {
+}
+.programm__title {
+    margin-bottom: 20px;
+}
+.programm__text {
+}
+/* ======================================================================Аккордион====================================================================== */
+.tab-controls {
+    display: flex;
+    gap: 26px;
+}
+.tab-controls__item {
+}
+.tab-controls__link {
+    display: block;
+    background-color: var(--accent-text);
+    border-radius: 100px;
+    padding: 14px 30px;
+    box-shadow: 0px 4px 20px 0px rgba(206, 195, 185, 0.3);
+    white-space: nowrap;
+
+    transition: 0.4s;
+}
+.tab-controls__link:hover {
+    background-color: #FFE0CB;
+}
+
+.tab-controls__link--active {
+    background-color: #FFE0CB;
+    box-shadow: 0px 4px 20px 0px rgba(206, 195, 185, 0);
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content--show {
+    display: block;
+}
+
+.accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.accordion-list__item {
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+}
+.accordion-list__item--opened {
+}
+.accordion-list__control {
+    padding: 41px 30px;
+    width: 100%;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-list__control-icon {
+    border: 1.5px solid var(--accent-color);
+    border-radius: 100px;
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    transition: 0.4s;
+}
+.accordion-list__control-icon path {
+    transition: 0.4s;
+}
+
+.accordion-list__control:hover .accordion-list__control-icon {
+    background-color: var(--accent-color);
+    transform: rotate(90deg);
+}
+.accordion-list__control:hover .accordion-list__control-icon path {
+    fill: var(--accent-text);
+}
+.accordion-list__item--opened .accordion-list__control-icon {
+    background-color: var(--accent-color);
+    transform: rotate(90deg);
+}
+.accordion-list__item--opened .accordion-list__control-icon path {
+    fill: var(--accent-text);
+}
+
+
+
+.accordion-list__control-title {
+    text-align: left;
+}
+.accordion-list__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+
+
+.accordion-content {
+    padding: 0px 30px 40px;
+
+    display: flex;
+    gap: 80px;
+}
+.accordion-content__col:first-child {
+    max-width: 507px;
+    width: 100%;
+}
+.accordion-content__col {
+}
+.accordion-content__title {
+    color: #CEAAD0;
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.accordion-content__list {
+}
+.accordion-content__item {
+    margin-bottom: 20px;
+    display: flex;
+}
+.accordion-content__item:last-child {
+    margin-bottom: 0;
+}
+.accordion-content__icon {
+    border: 1px solid #CEAAD0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion-content__text {
+    max-width: 274px;
+}
+/* =========================================================================================================================================== */
+.programm__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 40px;
+}
+.program__action {
+    display: grid;
+    grid-template: repeat(3, auto) / 1.65fr 1fr;
+    gap: 40px;
+    max-width: 501px;
+    flex-shrink: 0;
+}
+
+.program__discount {
+    font-size: 20px;
+    background: var(--accent-bg);
+    border-radius: 20px;
+    padding: 40px;
+    grid-row: 1 / 3;
+}
+
+.program__discount-value {
+    font-family: "Gabriola";
+    font-size: 74px;
+    line-height: .82;
+    color: var(--accent-color);
+    transform-origin: 0 0;
+    margin: 0 0 7px 13%;
+
+    animation: discount-grow .8s linear infinite alternate;
+}
+
+@keyframes discount-grow {
+    0% {
+        transform: scale(1);
+        color: var(--accent-color);
+    }
+
+    100% {
+        transform: translateX(3%) scale(1.1);
+        color: #FF9138;
+    }
+}
+
+.program__discount span {
+    font-size: 16px;
+    margin-left: 35%;
+}
+
+.program__price {}
+
+.program__price-text {
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: #CEAAD0;
+    margin-bottom: 5px;
+}
+
+.program__price-value {
+    font-family: 'Gabriola';
+    font-size: 32px;
+    line-height: .9;
+}
+
+.program__price-value--big {
+    font-size: 50px;
+    color: var(--general-text);
+}
+.programm__button {
+    grid-column: 1 / -1;
+    padding: 18px 36px;
+}
+.programm__img {
+    width: 100%;
+    min-width: 200px;
+    
+}
+
+/* ================================================================================================================== */
+
+
 @media (max-width: 1300px) {
     .bake-school-info__inner {
         gap: 112px;
@@ -698,6 +948,15 @@ body {
         max-width: none;
         margin-top: 30px;
     }
+    .programm__top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+        
+    }
+    .tab-controls {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -709,6 +968,10 @@ body {
 
     .cards-block {
         max-height: none;
+    }
+    .accordion-list__control {
+        padding: 25px 30px;
+        font-size: 35px;
     }
 }
 
@@ -778,7 +1041,12 @@ body {
     .burger-icon {
         display: flex;
     }
-
+    .programm__img {
+        display: none;
+    }
+    .programm__bottom {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 800px) {
@@ -859,6 +1127,24 @@ body {
     .tel {
         text-align: center;
     }
+    .tab-controls {
+        gap: 10px;
+    }
+    .tab-controls__link {
+        padding: 6px 20px;
+    }
+    .accordion-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px 30px 20px;
+    }
+    .accordion-content__col {
+        max-width: none;
+        width: 100%;
+    }
+    .accordion-content__text {
+        max-width: none;
+    }
 }
 
 @media (max-width: 660px) {
@@ -887,6 +1173,29 @@ body {
         width: 9vw;
         height: 9vw;
     }
+    .programm__title {
+        text-align: center;
+    }
+    .programm__text {
+        text-align: center;
+    }
+    .tab-controls {
+        justify-content: center;
+    }
+    .accordion-list {
+        gap: 10px;
+    }
+    .accordion-list__control {
+        padding: 17px 30px;
+        gap: 10px;
+    }
+    .accordion-list__control-title {
+        font-size: 28px;
+    }
+    .accordion-list__control-icon {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 @media (max-width: 550px) {
@@ -907,6 +1216,16 @@ body {
     .bake-hat {
         min-width: 9vw;
 
+    }
+    .program__action {
+        grid-template: repeat(3, auto) / auto auto;
+        gap: 15px;
+        flex-shrink: 1;
+    }
+    .program__discount {
+        grid-row: auto;
+        grid-column: 1/-1;
+        justify-self: center;
     }
 }
 
@@ -953,10 +1272,24 @@ body {
     .modal__img {
         
     }
+    .accordion-list__control {
+        padding: 17px 15px;
+        gap: 10px;
+    }
+    .program__action {
+        grid-template: none;
+    }
+
+    .program__price {
+        text-align: center;
+    }
 }
 @media (max-width: 400px) {
     .modal__window { 
         padding: 133px 20px 0;
+    }
+    .programm__top {
+        margin-bottom: 15px;
     }
 }
 @media (max-width: 375px) {
