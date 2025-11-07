@@ -1,0 +1,199 @@
+:root {
+    --general-text: #312C27;
+    --accent-text: #FFF9F4;
+    --title-text: #1F1711;
+    --accent-color: #FFA55C;
+    --accent-bg: #FFE0CB;
+
+}
+
+body {
+    font-family: "Gabriola", "Arial", sans-serif;
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #FFF9F4;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--accent-color);
+    font-weight: 500;
+    padding: 3px 15px;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+.button:hover {
+    background: #FF9138;
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--modal-opened {}
+
+.title-in-general {
+    color: var(--title-text);
+    font-family: Gabriola;
+    font-size: 74px;
+    line-height: 0.82;
+}
+.title-in-general-s {
+    color: var(--title-text);
+    font-family: Gabriola;
+    font-size: 42px;
+    line-height: 0.82;
+}
+
+/* =================================================Модалка=============================================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(49, 44, 39, 0.71);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.body--modal-opened .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__window {
+    max-width: 428px;
+    padding: 133px 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: var(--accent-text);
+    border-radius: 20px;
+
+}
+
+.modal__cancel {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal__cancel-icon path {
+    transition: 0.4s;
+}
+
+.modal__cancel-icon:hover path {
+    stroke: #AC907A;
+}
+
+.modal__img {
+    position: absolute;
+    /* left: 72px;
+    top: -65px; */
+    transform: translateY(-193px);
+}
+
+.modal__title {
+    /* margin-top: 133px; */
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+.modal__p {
+    margin-bottom: 30px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--general-text);
+}
+
+.modal__form {
+    display: block;
+    width: 100%;
+}
+
+.modal__form-label {
+    position: relative;
+}
+
+.modal__form-label span {
+    position: absolute;
+    font-size: 11px;
+    top: 12px;
+    left: 28px;
+    color: #AC907A;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.modal__form-input {
+    display: block;
+    border: 1px solid #AC907A;
+    border-radius: 100px;
+    padding: 19px 28px;
+    margin-bottom: 10px;
+    width: 100%;
+    transition: 0.4s;
+    font-size: 16px;
+}
+
+.modal__form-input:hover {
+    border-color: var(--accent-color);
+}
+
+.modal__form-input::placeholder {
+    color: #AC907A;
+    transition: 0.4s;
+}
+
+.modal__form-input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.modal__form-input:focus {
+    padding: 26px 28px 12px
+}
+
+.modal__form-input:focus+span {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__button {
+    color: var(--general-text);
+    font-size: 16px;
+    width: 100%;
+    max-width: 308px;
+    height: 62px;
+    margin-bottom: 67px;
+}

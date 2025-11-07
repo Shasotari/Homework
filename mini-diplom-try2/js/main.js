@@ -1,10 +1,10 @@
 // ============================= бургер =================================== //
-(function() {
-    
+(function () {
+
     document.addEventListener('click', burgerMenu)
 
     function burgerMenu(m) {
-        
+
         const burgerIcon = m.target.closest('.burger-icon')
         const burgerNavLink = m.target.closest('.nav__link')
 
@@ -21,35 +21,35 @@
 
 })();
 // ============================================================================
-(function() {
+(function () {
     // модалка =============================================================
     document.addEventListener('click', modalW)
 
     function modalW(w) {
-        
+
         const giftButton = w.target.closest('.button-gift')
         const closeModal = w.target.closest('.modal__cancel')
         const modalButton = w.target.closest('.modal__button')
         const modal = w.target.closest('.modal')
         const modalWindow = w.target.closest('.modal__window')
-        
+
         if (giftButton) {
             document.body.classList.add('body--modal-opened')
             return
         }
-        
-        
+
+
         if (closeModal || modalButton) {
             document.body.classList.remove('body--modal-opened')
             return
         }
-        
-        
+
+
         if (modal && !modalWindow) {
             document.body.classList.remove('body--modal-opened')
         }
     }
-// табы ===============================================================================================
+    // табы ===============================================================================================
 
     const tabControls = document.querySelector('.tab-controls')
 
@@ -71,16 +71,16 @@
 
         activeContent.classList.remove('tab-content--show')
         tabContent.classList.add('tab-content--show')
-        
+
         activeControl.classList.remove('tab-controls__link--active')
         tabControl.classList.add('tab-controls__link--active')
     }
-//  Аккордеон ===============================================================================
-        const accordionLists = document.querySelectorAll('.accordion-list');
+    //  Аккордеон ===============================================================================
+    const accordionLists = document.querySelectorAll('.accordion-list');
 
-        accordionLists.forEach(el => {
+    accordionLists.forEach(el => {
 
-            el.addEventListener('click', (e) => {
+        el.addEventListener('click', (e) => {
 
             const accordionList = e.currentTarget
             const accordionOpenedItem = accordionList.querySelector('.accordion-list__item--opened')
@@ -103,9 +103,45 @@
                 accordionContent.style.maxHeight = null;
             }
 
-            }); 
-
         });
 
+    });
+
+    // ======================================================================================================== //
+
+    const swiper = new Swiper('.gallery__slider', {
+
+        spaceBetween: 16,
+        slidesPerView: 1,
+        pagination: {
+            type: 'fraction',
+            el: '.gallery__pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.gallery__next',
+            prevEl: '.gallery__prev',
+        },
+
+        // using "ratio" endpoints
+        breakpoints: {
+            451: {
+                slidesPerView: 2,
+            },
+            601: {
+                slidesPerView: 3,
+            },
+            801: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+            1101: {
+                slidesPerView: 4,
+                spaceBetween: 32,
+            },
+        }
+
+    });
 
 })()

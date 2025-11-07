@@ -1,0 +1,393 @@
+@media (max-width: 1300px) {
+    .bake-school-info__inner {
+        gap: 112px;
+    }
+
+    .bake-school-info__gift {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bake-school-info__gift>img {
+        max-width: 393px;
+        max-height: 354px;
+    }
+
+    .gift-content {
+        position: static;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero__preview {
+        margin: 0;
+        max-width: 377px;
+    }
+
+    .hero__preview-content {
+        position: static;
+        max-width: none;
+        margin-top: 30px;
+    }
+    .programm__top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+        
+    }
+    .tab-controls {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .bake-school-info__inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .cards-block {
+        max-height: none;
+    }
+    .accordion-list__control {
+        padding: 25px 30px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .footer__inner {
+        gap: 8px;
+        justify-content: space-between;
+    }
+
+    .footer__logo-socials {
+        text-align: center;
+
+    }
+
+    .socials__list {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .nav-footer,
+    .signboard {
+        margin: 0;
+    }
+
+    .nav-footer__list {
+        max-width: 96.8px;
+    }
+
+    .tel {
+        font-size: 18px;
+        text-align: end;
+    }
+
+    .signboard {
+        margin: 0 6px;
+        min-width: 273px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav {
+        position: fixed;
+        background: whitesmoke;
+        inset: 0;
+        z-index: 5;
+        padding: 160px 15px 30px;
+        font-size: 24px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body--opened-menu .nav {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+    .programm__img {
+        display: none;
+    }
+    .programm__bottom {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__title {
+        text-align: center;
+    }
+
+    .hero__text {
+        text-align: center;
+    }
+
+    .hero__button {
+        width: 100%;
+    }
+
+    .hero__preview {
+        width: 100%;
+        max-width: 519px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero__preview p {
+        max-width: 260px;
+    }
+
+    .hero__preview>img {
+        display: none;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 20px;
+    }
+
+    .socials__list {
+        gap: 15px;
+    }
+
+    .footer__general-info {
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .nav-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+    }
+
+    .nav-footer__list {
+        gap: 15px;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        max-width: none;
+    }
+
+    .signboard__time-info {
+        justify-content: center;
+    }
+
+    .tel {
+        text-align: center;
+    }
+    .tab-controls {
+        gap: 10px;
+    }
+    .tab-controls__link {
+        padding: 6px 20px;
+    }
+    .accordion-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px 30px 20px;
+    }
+    .accordion-content__col {
+        max-width: none;
+        width: 100%;
+    }
+    .accordion-content__text {
+        max-width: none;
+    }
+}
+
+@media (max-width: 660px) {
+    .main {
+        padding: 70px 0px;
+    }
+
+    .bake-school-info__description {
+        text-align: center;
+    }
+
+    .cards-block {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .card {
+        width: 45vw;
+        height: 22vw;
+        justify-content: center;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .bake-hat {
+        width: 9vw;
+        height: 9vw;
+    }
+    .programm__title {
+        text-align: center;
+    }
+    .programm__text {
+        text-align: center;
+    }
+    .tab-controls {
+        justify-content: center;
+    }
+    .accordion-list {
+        gap: 10px;
+    }
+    .accordion-list__control {
+        padding: 17px 30px;
+        gap: 10px;
+    }
+    .accordion-list__control-title {
+        font-size: 28px;
+    }
+    .accordion-list__control-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero {
+        padding-bottom: 80px;
+    }
+
+    .hero__title {
+        font-size: 13vw;
+    }
+
+    .card {
+        font-size: 2.9vw;
+        gap: 5px;
+        padding: 15px;
+    }
+
+    .bake-hat {
+        min-width: 9vw;
+
+    }
+    .program__action {
+        grid-template: repeat(3, auto) / auto auto;
+        gap: 15px;
+        flex-shrink: 1;
+    }
+    .program__discount {
+        grid-row: auto;
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .gift-content {
+        width: 60vw;
+        align-items: center;
+        font-size: 3vw;
+        padding: 8px;
+    }
+
+    .button-gift {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .cards-block {
+        flex-direction: column;
+    }
+
+    .card {
+        font-size: 16px;
+        justify-content: start;
+        max-width: 100vw;
+        width: 100vw;
+        height: 12vh;
+        text-align: left;
+    }
+
+    .bake-hat {
+        min-width: 45px;
+        min-height: 45px;
+    }
+
+    .card p {
+        max-width: none;
+    }
+}
+@media (max-width: 450px) {
+    .modal__window {
+        margin: 0px 15px;
+        padding: 133px 30px 0;
+    }
+    .accordion-list__control {
+        padding: 17px 15px;
+        gap: 10px;
+    }
+    .program__action {
+        grid-template: none;
+    }
+
+    .program__price {
+        text-align: center;
+    }
+}
+@media (max-width: 400px) {
+    .modal__window { 
+        padding: 133px 20px 0;
+    }
+    .programm__top {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 375px) {
+    .footer__inner {
+        font-size: 4vw;
+    }
+    .modal__window {
+        text-align: center;
+    }
+    .modal__img {
+        width: 207px;
+        transform: translateY(-183px);
+    }
+    .modal__cancel {
+        top: 100px;
+    }
+
+    .gift-content {
+        font-size: 11px;
+    }
+}
