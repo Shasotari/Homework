@@ -79,9 +79,12 @@ body {
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    
     transition: 0.4s;
 }
-
+.body.body--modal-opened {
+    overflow: hidden;
+}
 .body--modal-opened .modal {
     opacity: 1;
     visibility: visible;
@@ -96,7 +99,7 @@ body {
     position: relative;
     background: var(--accent-text);
     border-radius: 20px;
-
+    
 }
 
 .modal__cancel {

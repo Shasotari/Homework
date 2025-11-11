@@ -6,8 +6,6 @@
 
 /* =========================================================================== */
 
-.main {}
-
 .main__bake-school-info {
     padding: 140px 0;
 }
@@ -23,7 +21,10 @@
 
 .bake-school-info__gift>img {
     width: 100%;
+    height: 100%;
     border-radius: 20px;
+    object-fit: cover;
+    object-position: 0% 50%;
 }
 
 .gift-content {
@@ -91,7 +92,10 @@
     display: block;
     margin-top: 30px;
 }
-
+.card-blocks {
+    display: flex;
+    gap: 32px;
+}
 .cards-block {
     max-height: 292px;
     display: flex;
@@ -129,7 +133,7 @@
     padding-bottom: 145px;
 }
 
-.programm {}
+
 
 .programm__top {
     display: flex;
@@ -139,13 +143,13 @@
     gap: 15px;
 }
 
-.programm__heading {}
+
 
 .programm__title {
     margin-bottom: 20px;
 }
 
-.programm__text {}
+
 
 /* ======================================================================Аккордион====================================================================== */
 .tab-controls {
@@ -153,7 +157,7 @@
     gap: 26px;
 }
 
-.tab-controls__item {}
+
 
 .tab-controls__link {
     display: block;
@@ -194,7 +198,7 @@
     border-radius: 20px;
 }
 
-.accordion-list__item--opened {}
+
 
 .accordion-list__control {
     padding: 41px 30px;
@@ -268,7 +272,7 @@
     width: 100%;
 }
 
-.accordion-content__col {}
+
 
 .accordion-content__title {
     color: #CEAAD0;
@@ -277,7 +281,7 @@
     margin-bottom: 20px;
 }
 
-.accordion-content__list {}
+
 
 .accordion-content__item {
     margin-bottom: 20px;
@@ -358,7 +362,7 @@
     margin-left: 35%;
 }
 
-.program__price {}
+
 
 .program__price-text {
     line-height: 1.6;
@@ -393,7 +397,7 @@
     padding-bottom: 140px;
 }
 
-.gallery {}
+
 
 .gallery__inner {
     display: grid;
@@ -427,7 +431,7 @@
     margin-bottom: 20px;
 }
 
-.gallery__text {}
+
 
 .gallery__nav {
     display: flex;
@@ -440,10 +444,7 @@
     line-height: 0.9;
 }
 
-.gallery__prev {}
 
-
-.gallery__next {}
 
 .gallery__next,
 .gallery__prev {
@@ -455,11 +456,11 @@
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     transition: 0.4s;
 }
 
@@ -468,31 +469,37 @@
     border: 1.5px solid #e1d9e1;
     cursor: auto;
 }
+
 .swiper-button-disabled.gallery__next:hover,
 .swiper-button-disabled.gallery__prev:hover {
     background-color: transparent;
 }
+
 .swiper-button-disabled.gallery__next path,
 .swiper-button-disabled.gallery__prev path {
     fill: #e1d9e1;
 }
+
 .swiper-button-disabled.gallery__next:hover path,
 .swiper-button-disabled.gallery__prev:hover path {
     fill: #e1d9e1;
 }
-.gallery__next:hover ,
+
+.gallery__next:hover,
 .gallery__prev:hover {
     background-color: var(--accent-color);
 }
+
 .gallery__next path,
 .gallery__prev path {
     transition: 0.4s;
 }
 
-.gallery__next:hover path ,
+.gallery__next:hover path,
 .gallery__prev:hover path {
     fill: var(--accent-text);
 }
+
 .gallery__pagination {
     display: flex;
     position: absolute;
@@ -503,14 +510,12 @@
     transform: translate(-50%, -50%);
 }
 
-.gallery__slider {}
 
-.gallery__wrapper {}
 
 .gallery__slide img {
     border-radius: 20px;
     width: 100%;
-    
+
 }
 
 
@@ -535,20 +540,8 @@
         gap: 112px;
     }
 
-    .bake-school-info__gift {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .bake-school-info__gift>img {
-        max-width: 393px;
-        max-height: 354px;
-    }
-
-    .gift-content {
-        position: static;
+    .tel {
+        font-size: 22px;
     }
 }
 
@@ -574,27 +567,76 @@
     .tab-controls {
         flex-wrap: wrap;
     }
+
+    .tel {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1100px) {
+    .hero {
+        padding-bottom: 60px;
+    }
+    .main__bake-school-info {
+        padding: 60px;
+    }
     .bake-school-info__inner {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         gap: 36px;
     }
 
+    .bake-school-info__description {
+        max-width: none;
+    }
+    .description-text {
+        justify-self: start;
+        text-align: left;
+    }
+    .card-blocks {
+        flex-direction: column;
+    }
     .cards-block {
-        max-height: none;
+        gap: 30px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 520px;
+    }
+    .bake-hat {
+        flex-shrink: 0;
+    }
+
+    .card p {
+        max-width: none;
     }
 
     .accordion-list__control {
         padding: 25px 30px;
         font-size: 35px;
     }
+
+    .programm__title {
+        text-align: center;
+    }
+
+    .programm__top {
+        justify-self: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 1000px) {
-
+    .bake-school-info__gift {
+        
+    }
+    .bake-school-info__gift>img {
+        width: 482px;
+        height: 434px;
+    }
     .footer__inner {
         gap: 8px;
         justify-content: space-between;
@@ -660,6 +702,10 @@
         display: flex;
     }
 
+    .hero {
+        padding-bottom: 60px;
+    }
+
     .programm__img {
         display: none;
     }
@@ -667,14 +713,34 @@
     .programm__bottom {
         justify-content: center;
     }
+
     .gallery__inner {
         grid-template: none;
     }
+
     .gallery__img {
         display: none;
     }
+
     .gallery__info {
         max-width: none;
+        position: relative;
+    }
+
+    .main__bake-school-info {
+        padding: 40px 0;
+    }
+
+    .gallery__title {
+        transform: translate(40%);
+    }
+
+    .gallery__text {
+        text-align: justify;
+    }
+
+    .main__programm {
+        padding: 40px 0;
     }
 }
 
@@ -716,7 +782,9 @@
     .hero__preview>img {
         display: none;
     }
-
+    .description-text {
+        text-align: center;
+    }
     .footer__inner {
         flex-direction: column;
         gap: 5px;
@@ -789,7 +857,25 @@
     .bake-school-info__description {
         text-align: center;
     }
+    .bake-school-info__gift>img {
+        width: 382px;
+        height: 334px;
+    }
+    .gift-content {
+        width: 244px;
+        align-items: center;
+        font-size: 13px;
+        padding: 8px;
+    }
 
+    .button-gift {
+        width: 66px;
+        height: 66px;
+    }
+    
+    .card-blocks {
+        gap: 12px;
+    }
     .cards-block {
         justify-content: center;
         gap: 12px;
@@ -800,7 +886,7 @@
         height: 22vw;
         justify-content: center;
         padding: 5px;
-        text-align: center;
+        text-align: left;
     }
 
     .bake-hat {
@@ -837,11 +923,16 @@
         width: 26px;
         height: 26px;
     }
+
     .gallery__content {
         align-items: center;
         justify-content: center;
         flex-direction: column;
         text-align: center;
+    }
+
+    .gallery__title {
+        transform: translate(0%);
     }
 }
 
@@ -862,7 +953,6 @@
 
     .bake-hat {
         min-width: 9vw;
-
     }
 
     .program__action {
@@ -880,15 +970,15 @@
 
 @media (max-width: 520px) {
     .gift-content {
-        width: 60vw;
+        width: 250px;
         align-items: center;
-        font-size: 3vw;
+        font-size: 12.5px;
         padding: 8px;
     }
 
     .button-gift {
-        width: 15vw;
-        height: 15vw;
+        width: 52px;
+        height: 52px;
     }
 
     .cards-block {
@@ -898,8 +988,8 @@
     .card {
         font-size: 16px;
         justify-content: start;
-        max-width: 100vw;
-        width: 100vw;
+        width: 100%;
+        max-width: none;
         height: 12vh;
         text-align: left;
     }
@@ -919,7 +1009,11 @@
         margin: 0px 15px;
         padding: 133px 30px 0;
     }
-
+    
+    .bake-school-info__gift>img {
+        width: 332px;
+        height: 284px;
+    }
     .accordion-list__control {
         padding: 17px 15px;
         gap: 10px;
@@ -932,13 +1026,15 @@
     .program__price {
         text-align: center;
     }
+
     .gallery__slide {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
     }
-    .gallery__slide img{
+
+    .gallery__slide img {
         width: 60%;
     }
 }
@@ -957,7 +1053,11 @@
     .footer__inner {
         font-size: 4vw;
     }
-
+    
+    .bake-school-info__gift>img {
+        width: 282px;
+        height: 234px;
+    }
     .modal__window {
         text-align: center;
     }
@@ -974,6 +1074,7 @@
     .gift-content {
         font-size: 11px;
     }
+
     .gallery__title {
         font-size: 52px;
     }
